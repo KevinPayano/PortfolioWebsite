@@ -1,0 +1,61 @@
+---
+import DesignTag from "./DesignTag.astro";
+import DevelopTag from "./DevelopTag.astro";
+
+interface Props {
+	paragraph: string;
+  header: string;
+  href: string;
+};
+
+const {paragraph} = Astro.props;
+const {header} = Astro.props;
+const {href} = Astro.props;
+---
+
+<a href={href} class="border border-gray-600 transition duration-300 ease-in-out hover:border-gray-200">
+  
+    <slot name="card-image"/>
+    
+    <!-- Card Info Start -->
+    <div class="space-y-3 p-2">
+
+      <DesignTag />
+      <DevelopTag />
+
+      <!-- Header & Paragraph Start -->
+      <h3 class="text-2xl font-IBMPlex font-medium leading-tight text-white">
+        {header}
+      </h3>
+
+      <p class="line-clamp-2 text-lg font-Roboto text-gray-300">
+        {paragraph}
+      </p>
+      <!-- Header & Paragraph Ends -->
+
+      <!-- Tooltip w/ Arrow Start -->
+      <div class="grid grid-cols-2">
+
+        <!-- Tooltip Container Start -->
+        <div class="flex grid-cols-5 justify-self-start relative">
+
+        <slot />
+          
+        </div>
+        <!-- Tooltip Container Ends -->
+
+        <!-- Arrow Container Start -->
+        <div class="justify-self-end self-center">
+          <svg class="w-6 h-6 text-gray-100" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+          </svg>
+        </div>
+        <!-- Arrow Container Ends -->
+        
+      </div>
+      <!-- Tooltip w/ Arrow Ends -->
+
+    </div>
+    <!-- Card Info Ends -->
+
+  </a>

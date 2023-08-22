@@ -1,0 +1,12 @@
+---
+interface Props {
+    tooltext: string;
+};
+
+const {tooltext} = Astro.props;
+---
+
+<div class="grid justify-items-center relative group p-2">
+    <slot />
+    <span class="group-hover:opacity-100 transition-opacity bg-gray-950 px-1 text-sm text-gray-100 rounded-md absolute top-8 opacity-0 m-2 mx-auto">{tooltext}</span>
+</div>
