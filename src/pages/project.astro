@@ -1,35 +1,13 @@
 ---
 import Navigation from '../components/Navigation.astro';
 import MainLayout from '../layouts/MainLayout.astro';
+import ProjectHero from '../layouts/ProjectHero.astro';
 ---
 
 <MainLayout title='CEC Website | Kevin Payano Portfolio'>
-    <!-- Hero 1 Section Starts -->
-    <section class="">
-        <div class="relative w-full h-screen">
-          <img alt="" src="assets/CEC-Website.png" transition:name="project-image" class="object-center object-cover inset-0 absolute h-full w-full" alt="...">
-          <div class="relative bg-gradient-to-t from-black to-black/25 w-full h-full">
-  
-            <!-- Title & Description Start -->
-            <figure class="absolute h-full w-full grid content-center justify-center pb-8 sm:px-4"> 
-              <div class="space-y-3 mb-6">
-  
-                <h3 class="text-6xl text-center font-IBMPlex leading-tight text-white">
-                  Concrete Experts Company Website
-                </h3>
-  
-                <p class="text-lg text-center font-IBMPlex text-gray-400">
-                  Flowbite helps you connect with friends, family and communities of people who share your interests.
-                </p>
-  
-              </div>
-            </figure>
-            <!-- Title & Description End -->
-  
-          </div>
-        </div>
-    </section>
-    <!-- Hero 1 Section Ends -->
+    <ProjectHero header='Concrete Experts Company' paragraph='Discover how a strategic redesign transformed a concrete contractor website into a user-friendly hub.'>
+      <img slot="project-bgImage" alt="" src="assets/CEC-Website.png" transition:name="project-image" class="object-center object-cover inset-0 absolute h-full w-full" alt="...">
+    </ProjectHero>
 
     <Navigation></Navigation>
 

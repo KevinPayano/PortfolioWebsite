@@ -1,0 +1,38 @@
+---
+interface Props {
+    header: string;
+    paragraph: string;
+};
+
+const {header} = Astro.props;
+const {paragraph} = Astro.props;
+---
+
+<!-- Hero Section Starts -->
+<section class="">
+    <div class="relative w-full h-screen">
+
+        <slot name="project-bgImage" />
+        
+        <div class="relative bg-gradient-to-t from-black to-black/25 w-full h-full">
+
+            <!-- Title & Description Start -->
+            <figure class="absolute h-full w-full grid content-center justify-center pb-8 sm:px-4"> 
+            <div class="space-y-3 mb-6">
+
+                <h3 class="text-6xl text-center font-IBMPlex leading-tight text-white">
+                {header}
+                </h3>
+
+                <p class="text-lg text-center font-IBMPlex text-gray-400">
+                {paragraph}
+                </p>
+
+            </div>
+            </figure>
+            <!-- Title & Description End -->
+
+        </div>
+    </div>
+</section>
+<!-- Hero Section Ends -->
