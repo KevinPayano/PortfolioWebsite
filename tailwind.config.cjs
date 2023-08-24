@@ -23,16 +23,16 @@ module.exports = {
 			keyframes: {
 				contactGrad: {
 					"0%": {
-						transform: "translate(0px, 0px) scale(1)",
+						transform: "translate(0px, 0px) scale(2)",
 					},
 					"33%": {
-						transform: "translate(20px, -32px) scale(1.1)",
+						transform: "translate(20px, -32px) scale(2.1)",
 					},
 					"66%": {
-						transform: "translate(24px, 0px) scale(0.8)",
+						transform: "translate(24px, 0px) scale(1.8)",
 					},
 					"100%": {
-						transform: "translate(0px, 0px) scale(1)",
+						transform: "translate(0px, 0px) scale(2)",
 					}
 				}
 			},
