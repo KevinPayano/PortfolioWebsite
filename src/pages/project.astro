@@ -4,8 +4,6 @@ import MainLayout from '../layouts/MainLayout.astro';
 import ProjectHero from '../layouts/ProjectHero.astro';
 import ProjectInfo from '../layouts/ProjectInfo.astro';
 import Tooltip from '../components/Tooltip.astro';
-import DesignTag from '../components/DesignTag.astro';
-import DevelopTag from '../components/DevelopTag.astro';
 ---
 
 <MainLayout title='CEC Website | Kevin Payano Portfolio'>
@@ -27,9 +25,6 @@ import DevelopTag from '../components/DevelopTag.astro';
     toolsHeader='Tools'
     yearHeader='Year'
     year='2023'>
-
-      <DesignTag slot="tags"/>
-      <DevelopTag slot="tags"/>
 
       <!-- Figma -->
       <Tooltip slot="tooltips" tooltext="Figma">
@@ -59,7 +54,7 @@ import DevelopTag from '../components/DevelopTag.astro';
     </ProjectInfo>
 
     <!-- Video Case Study Section Start -->
-    <section class="h-screen">
+    <section class="h-screen bg-[#010105]">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 sm:text-center lg:py-16">
             <h2 class="mb-4 text-4xl tracking-tight font-IBMPlex text-gray-100">Video Case Study</h2>
             <iframe class="mx-auto mt-8 w-full max-w-2xl h-full rounded-lg lg:mt-12 sm:h-96" src="https://www.youtube.com/embed/4bnJG2UDr9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
