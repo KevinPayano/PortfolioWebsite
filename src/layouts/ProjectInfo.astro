@@ -1,4 +1,7 @@
 ---
+import GithubButton from '../components/GithubButton.astro';
+import LiveButton from '../components/LiveButton.astro';
+
 interface Props {
     projectHeader: string;
     projectDescription: string;
@@ -29,8 +32,14 @@ const {year} = Astro.props;
         <!-- Left Side -->
         <div class="text-gray-500 sm:text-lg">
             <h2 class="mb-4 text-6xl tracking-tight font-IBMPlex text-gray-100">{projectHeader}</h2>
-            <slot name="tags" />
-            <p class="mb-8 font-IBMPlex lg:text-xl">{projectDescription}</p>    
+            <!--<slot name="tags" />-->
+            <p class="mb-8 font-IBMPlex lg:text-xl">{projectDescription}</p>
+
+            <div class="flex gap-4">
+                <GithubButton href=''/>
+                <LiveButton href=''/>
+            </div>    
+            
         </div>
 
         <!-- Right Side -->

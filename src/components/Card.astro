@@ -13,28 +13,33 @@ const {header} = Astro.props;
 const {href} = Astro.props;
 ---
 
-<a href={href} class="cursor-pointer border border-gray-600 transition duration-300 ease-in-out hover:border-gray-200">
+<a href={href} class="cursor-pointer p-2 border rounded border-gray-600 transition duration-300 ease-in-out hover:border-gray-200">
   
     <slot name="card-image"/>
     
     <!-- Card Info Start -->
-    <div class="space-y-3 p-2">
+    <div class="space-y-6 p-2 divide-y divide-gray-800">
 
-      <DesignTag />
-      <DevelopTag />
+      <!-- Header & Paragraph Container Start -->
+      <div class="">
+        <!--<DesignTag />
+        <DevelopTag />-->
 
-      <!-- Header & Paragraph Start -->
-      <h3 class="text-2xl font-IBMPlex font-medium leading-tight text-white">
-        {header}
-      </h3>
+        <!-- Header & Paragraph Start -->
+        <h3 class="text-2xl font-IBMPlex font-medium leading-tight text-white">
+          {header}
+        </h3>
 
-      <p class="line-clamp-2 text-lg font-Roboto text-gray-300">
-        {paragraph}
-      </p>
-      <!-- Header & Paragraph Ends -->
+        <p class="line-clamp-2 text-lg font-Roboto text-gray-500">
+          {paragraph}
+        </p>
+        <!-- Header & Paragraph Ends -->
+
+      </div>
+      <!-- Header & Paragraph Container Ends -->
 
       <!-- Tooltip w/ Arrow Start -->
-      <div class="grid grid-cols-2">
+      <div class="grid grid-cols-2 pt-2">
 
         <!-- Tooltip Container Start -->
         <div class="flex grid-cols-5 justify-self-start relative">
