@@ -13,11 +13,9 @@ import Tool from '../components/Tool.astro';
 		<div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
 			<div class="mr-auto place-self-center lg:col-span-7">
 				<h1 class="text-white max-w-2xl mb-4 text-4xl font-sans tracking-tight leading-none md:text-5xl xl:text-6xl">Hi, my name is Kevin. I build conversion-leading websites for businesses.</h1>
-				<a href="#aboutSection" class="group cursor-pointer inline-flex items-center justify-center px-5 py-2.5 font-medium text-center text-blue-600 shrink-0 hover:underline">
+				<a href="#aboutSection" class="group cursor-pointer inline-flex items-center justify-center px-5 py-2.5 font-medium text-center text-gray-300 shrink-0 hover:text-gray-100">
 					Learn more
-					<svg class="w-5 h-5 text-gray-200 ml-2 rotate-45 self-center opacity-0 transition ease-in-out duration-500 group-hover:translate-x-1 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-					</svg>
+					<svg class="w-5 h-5 text-gray-200 ml-2 self-end transition ease-in-out duration-500 group-hover:translate-x-1 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path fill="currentColor" d="m359.873 121.377l-22.627 22.627l95.997 95.997H16v32.001h417.24l-95.994 95.994l22.627 22.627L494.498 256L359.873 121.377z"/></svg>
 				</a>
 			</div>
 			<a href="#projectSection" class="cursor-pointer relative flex justify-center place-self-center group lg:mt-0 lg:col-span-5">
@@ -78,9 +76,9 @@ import Tool from '../components/Tool.astro';
 			<Card 
 			header='Concrete Experts Company' 
 			paragraph='Discover how a strategic redesign transformed a concrete contractor website into a user-friendly hub.'
-			href='project.html'>
+			href='cec-project.html'>
 			
-				<img slot="card-image" transition:name="project-image" class="p-2 object-cover w-full" src="/assets/CEC-Website.png" alt="">
+				<img slot="card-image" transition:name="cec-image" class="p-2 object-cover w-full" src="/assets/CEC-Website.png" alt="">
 
 				<!-- Figma -->
 				<Tooltip tooltext="Figma">
@@ -113,9 +111,9 @@ import Tool from '../components/Tool.astro';
 			<Card
 			header='MCM Custom Builders'
 			paragraph='Discover how a strategic redesign transformed a concrete contractor website into a user-friendly hub.'
-			href=''>
+			href='mcm-project.html'>
 
-				<img slot="card-image" class="p-2 object-cover w-full" src="/assets/MCM-Website.jpg" alt="">
+				<img slot="card-image" transition:name="mcm-image" class="p-2 object-cover w-full" src="/assets/MCM-Website.jpg" alt="">
 		
 				<!-- Figma -->
 				<Tooltip tooltext="Figma">
