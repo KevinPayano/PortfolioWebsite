@@ -32,9 +32,9 @@ const {year} = Astro.props;
         
         <!-- Left Side -->
         <div class="text-gray-500 sm:text-lg">
-            <h2 class="mb-4 text-6xl tracking-tight font-IBMPlexMono text-gray-100">{projectHeader}</h2>
+            <h2 class="mb-4 text-6xl tracking-tight font-mono text-gray-100">{projectHeader}</h2>
             <!--<slot name="tags" />-->
-            <p class="mb-8 font-IBMPlexSans lg:text-xl">{projectDescription}</p>
+            <p class="mb-8 font-sans lg:text-xl">{projectDescription}</p>
 
             <div class="flex gap-4">
                 <GithubButton href=''/>
@@ -44,46 +44,42 @@ const {year} = Astro.props;
         </div>
 
         <!-- Right Side -->
-        <div class="grid divide-y-2 divide-gray-800">
-
-          <div class="grid grid-cols-2 content-center">
-              <div class="text-left">
-                  <h3 class="font-IBMPlexSans text-gray-100 text-xl">{clientHeader}</h3>
-              </div>
-              <div class="text-right">
-                  <p class="text-gray-500 font-IBMPlexSans">{client}</p>
-              </div>
-          </div>
+        <div class="grid divide-y-2 divide-gray-900">
 
           <div class="grid grid-cols-2 content-center">
             <div class="text-left">
-                <h3 class="font-IBMPlexSans text-gray-100 text-xl">{roleHeader}</h3>
+                <h3 class="font-sans font-medium text-gray-100 text-xl">{clientHeader}</h3>
             </div>
             <div class="text-right">
-                <p class="text-gray-500 font-IBMPlexSans">{role}</p>
+                <p class="text-gray-500 font-sans">{client}</p>
             </div>
           </div>
 
           <div class="grid grid-cols-2 content-center">
-
             <div class="text-left">
-                <h3 class="font-IBMPlexSans text-gray-100 text-xl">{toolsHeader}</h3>
+                <h3 class="font-sans font-medium text-gray-100 text-xl">{roleHeader}</h3>
             </div>
+            <div class="text-right">
+                <p class="text-gray-500 font-sans">{role}</p>
+            </div>
+          </div>
 
+          <div class="grid grid-cols-2 content-center">
+            <div class="text-left">
+                <h3 class="font-sans font-medium text-gray-100 text-xl">{toolsHeader}</h3>
+            </div>
             <div class="flex justify-end">
-
               <slot name="tooltips" />
-
             </div>
             
           </div>
 
           <div class="grid grid-cols-2 content-center">
             <div class="text-left">
-                <h3 class="font-IBMPlexSans text-gray-100 text-xl">{yearHeader}</h3>
+                <h3 class="font-sans font-medium text-gray-100 text-xl">{yearHeader}</h3>
             </div>
             <div class="text-right">
-                <p class="text-gray-500 font-IBMPlexSans">{year}</p>
+                <p class="text-gray-500 font-sans">{year}</p>
             </div>
           </div>
 
