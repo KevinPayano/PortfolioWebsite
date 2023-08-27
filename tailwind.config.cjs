@@ -13,8 +13,8 @@ module.exports = {
 			  },
 
 			fontFamily: {
-				IBMPlex: ["IBM Plex Sans", "sans-serif"],
-				Roboto: ["Roboto", "sans-serif"],
+				IBMPlexMono: ["IBM Plex Mono", "mono"],
+				IBMPlexSans: ["IBM Plex Sans", "sans"],
 			},
 		
 			animation: {
