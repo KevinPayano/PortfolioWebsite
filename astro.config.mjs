@@ -10,7 +10,4 @@ export default defineConfig({
       applyBaseStyles: false,
     },
   }), react()],
-  experimental: {
-    viewTransitions: true
-   }
 });
