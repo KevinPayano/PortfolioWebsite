@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import homeIcon from '../assets/HomeButton.png'
 import '../styles/main.css';
 ---
 
@@ -8,7 +10,7 @@ import '../styles/main.css';
 
         <!--Home Button Start-->
         <a href="index.html" class="cursor-pointer inline-flex flex-col items-center justify-center px-5 rounded-l-full hover:bg-gray-600/25 group">
-          <img src="/assets/HomeButton.png" class="w-6 h-6 group-hover:invisible"/>
+          <Image src={homeIcon} class="w-6 h-6 group-hover:invisible" alt='home button'/>
           <div class="absolute z-10 inline-block px-3 py-2 text-sm font-sans text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 group-hover:opacity-100">
             Home
           </div>

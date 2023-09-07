@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import mcmImage from '../assets/MCM-Website.jpg';
 import Navigation from '../components/Navigation.astro';
 import MainLayout from '../layouts/MainLayout.astro';
 import ProjectHero from '../layouts/ProjectHero.astro';
@@ -10,7 +12,7 @@ import Tooltip from '../components/Tooltip.astro';
     <ProjectHero 
     header='MCM Custom Builders' 
     paragraph='Discover how a strategic redesign transformed a concrete contractor website into a user-friendly hub.'>
-      <img slot="project-bgImage" alt="" src="assets/MCM-Website.jpg" transition:name="mcm-image" class="object-center object-cover inset-0 absolute h-full w-full" alt="...">
+      <Image slot="project-bgImage" alt="" src={mcmImage} transition:name="mcm-image" class="object-center object-cover inset-0 absolute h-full w-full" alt="MCM home page"/>
     </ProjectHero>
 
     <Navigation></Navigation>
