@@ -14,9 +14,9 @@ const {paragraph} = Astro.props;
 <section class="">
     <div class="relative w-full h-screen">
 
-        <slot name="project-bgImage" />
+        <slot class="z-0" name="project-bgImage" />
         
-        <div class="relative bg-gradient-to-t from-black to-black/25 w-full h-full">
+        <div class="relative z-10 bg-gradient-to-t from-black to-black/25 w-full h-full">
 
             <!-- Title & Description Start -->
             <figure class="absolute h-full w-full grid content-center justify-center pb-8 sm:px-4"> 

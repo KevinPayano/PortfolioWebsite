@@ -10,21 +10,24 @@ import Tooltip from '../components/Tooltip.astro';
     <ProjectHero 
     header='Concrete Experts Company' 
     paragraph='Discover how a strategic redesign transformed a concrete contractor website into a user-friendly hub.'>
-      <img slot="project-bgImage" alt="" src="assets/CEC-Website.png" transition:name="cec-image" class="object-center object-cover inset-0 absolute h-full w-full" alt="...">
+      <!--<img slot="project-bgImage" alt="" src="assets/CEC-Website.png" transition:name="cec-image" class="object-center object-cover inset-0 absolute h-full w-full" alt="...">-->
+      <video slot="project-bgImage" autoplay loop transition:name="cec-image" transition:persist class="object-center object-cover absolute inset-0 h-full w-full">
+        <source src="/video/CEC-Home.mp4" type="video/mp4">
+      </video>
     </ProjectHero>
 
     <Navigation></Navigation>
 
     <ProjectInfo 
-    projectHeader='Concrete Experts Company'
-    projectDescription='Discover how a strategic redesign transformed a concrete contractor website into a user-friendly hub.'
-    clientHeader='Client'
-    client='Concrete Experts Company'
-    roleHeader='Role'
-    role='Web Designer'
-    toolsHeader='Tools'
-    yearHeader='Year'
-    year='2023'>
+      projectHeader='Concrete Experts Company'
+      projectDescription='Discover how a strategic redesign transformed a concrete contractor website into a user-friendly hub.'
+      clientHeader='Client'
+      client='Concrete Experts Company'
+      roleHeader='Role'
+      role='Web Designer'
+      toolsHeader='Tools'
+      yearHeader='Year'
+      year='2023'>
 
       <!-- Figma -->
       <Tooltip slot="tooltips" tooltext="Figma">
