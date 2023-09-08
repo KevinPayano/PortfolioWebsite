@@ -1,6 +1,4 @@
 ---
-import GithubButton from '../components/GithubButton.astro';
-import LiveButton from '../components/LiveButton.astro';
 import '../styles/main.css';
 
 interface Props {
@@ -36,9 +34,9 @@ const {year} = Astro.props;
             <!--<slot name="tags" />-->
             <p class="mb-8 font-sans lg:text-xl">{projectDescription}</p>
 
+            <!-- Buttons Slot -->
             <div class="flex gap-4">
-                <GithubButton href=''/>
-                <LiveButton href=''/>
+              <slot name="buttons"/>
             </div>    
             
         </div>
