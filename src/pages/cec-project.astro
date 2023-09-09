@@ -1,8 +1,13 @@
 ---
-import Navigation from '../components/Navigation.astro';
+//Layout Imports
 import MainLayout from '../layouts/MainLayout.astro';
 import ProjectHero from '../layouts/ProjectHero.astro';
 import ProjectInfo from '../layouts/ProjectInfo.astro';
+import PS from '../layouts/P&S.astro';
+import BackgroundVid from '../layouts/BackgroundVid.astro';
+
+//Component Imports
+import Navigation from '../components/Navigation.astro';
 import Tooltip from '../components/Tooltip.astro';
 import GithubButton from '../components/GithubButton.astro';
 import LiveButton from '../components/LiveButton.astro';
@@ -13,8 +18,8 @@ import LiveButton from '../components/LiveButton.astro';
     header='Concrete Experts Company' 
     paragraph='Discover how a strategic redesign transformed a concrete contractor website into a user-friendly hub.'>
       <video slot="project-bgImage" autoplay loop transition:name="cec-image" transition:persist class="object-center object-cover absolute inset-0 h-full w-full">
-        <source src="/video/CEC-Home.mp4" type="video/mp4">
-      </video>
+        <source src="/video/CEC-Home.mp4" type="video/mp4" />
+      </video> 
     </ProjectHero>
 
     <Navigation></Navigation>
@@ -60,14 +65,13 @@ import LiveButton from '../components/LiveButton.astro';
 
     </ProjectInfo>
 
-    <!-- Video Case Study Section Start -->
-    <section class="h-screen bg-[#010105]">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 sm:text-center lg:py-16">
-            <h2 class="mb-4 text-4xl tracking-tight font-mono text-gray-100">Video Case Study</h2>
-            <iframe class="mx-auto mt-8 w-full max-w-2xl h-full rounded-lg lg:mt-12 sm:h-96" src="https://www.youtube.com/embed/4bnJG2UDr9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </section>
-    <!-- Video Case Study Section End -->
+    <PS></PS>
+
+    <BackgroundVid>
+      <source src="/video/CEC-Home.mp4" type="video/mp4" />
+    </BackgroundVid>
+
+
 
 </MainLayout>
 
