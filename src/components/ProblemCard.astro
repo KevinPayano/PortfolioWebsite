@@ -1,0 +1,48 @@
+---
+import '../styles/main.css';
+
+interface Props {
+    header: string;
+    paragraph: string;
+    pointOne: string;
+    pointTwo?: string;
+    pointThree?: string;
+};
+
+const header = Astro.props;
+const paragraph = Astro.props;
+const pointOne = Astro.props;
+const pointTwo = Astro.props;
+const pointThree = Astro.props;
+---
+
+<!-- Problem Card Start -->
+<div class="flex flex-col space-y-8 p-6 mx-auto max-w-lg text-gray-200 backdrop-blur-md bg-black/20 rounded-md border border-gray-100 shadow">
+
+    <!-- Header & Description Start -->
+    <div class="space-y-4">
+        <h3 class="text-2xl text-gray-50 font-mono font-medium">{header}</h3>
+        <p class="font-light font-sans text-gray-500 sm:text-lg">{paragraph}</p>
+    </div>
+    
+    <!-- List -->
+    <ul role="list" class="space-y-4 text-left font-sans">
+        <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg class="flex-shrink-0 w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path fill="currentColor" d="M240 176h32v176h-32zm0 208h32v32h-32z"/><path fill="currentColor" d="M274.014 16h-36.028L16 445.174V496h480v-50.826ZM464 464H48v-11.041L256 50.826l208 402.133Z"/></svg>
+            <span>{pointOne}</span>
+        </li>
+        <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg class="flex-shrink-0 w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path fill="currentColor" d="M240 176h32v176h-32zm0 208h32v32h-32z"/><path fill="currentColor" d="M274.014 16h-36.028L16 445.174V496h480v-50.826ZM464 464H48v-11.041L256 50.826l208 402.133Z"/></svg>
+            <span>{pointTwo}</span>
+        </li>
+        <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg class="flex-shrink-0 w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path fill="currentColor" d="M240 176h32v176h-32zm0 208h32v32h-32z"/><path fill="currentColor" d="M274.014 16h-36.028L16 445.174V496h480v-50.826ZM464 464H48v-11.041L256 50.826l208 402.133Z"/></svg>
+            <span>{pointThree}</span>
+        </li>
+    </ul>
+    
+</div>
+<!-- Problem Card End -->
