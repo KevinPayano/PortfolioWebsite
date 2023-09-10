@@ -72,7 +72,24 @@ import LiveButton from '../components/LiveButton.astro';
       <source src="/video/CEC-AboutUs.mp4" type="video/mp4" />
     </BackgroundVid>
 
-    <ColorType></ColorType>
+    <ColorType 
+      title='Color Scheme'
+      header='Colors that communicate the right message'
+      paragraph='These were the colors chosen'>
+
+        <div slot="colorOne" class="w-20 h-20 rounded-full bg-orange-500 border-4 border-orange-600 justify-self-center"></div>
+        <h3 slot="colorOne" class="mb-2 text-xl font-sans text-white text-center">#f97316</h3>
+
+        <div slot="colorTwo" class="w-20 h-20 rounded-full bg-gray-500 border-4 border-gray-600 justify-self-center"></div>
+        <h3 slot="colorTwo" class="mb-2 text-xl font-sans text-white text-center">#6b7280</h3>
+
+        <div slot="colorThree" class="w-20 h-20 rounded-full bg-gray-800 border-4 border-gray-900 justify-self-center"></div>
+        <h3 slot="colorThree" class="mb-2 text-xl font-sans text-white text-center">#1f2937</h3>
+
+        <div slot="colorFour" class="w-20 h-20 rounded-full bg-gray-50 border-4 border-gray-300 justify-self-center"></div>
+        <h3 slot="colorFour" class="mb-2 text-xl font-sans text-white text-center">#f9fafb</h3>
+    
+    </ColorType>
 
 </MainLayout>
 
