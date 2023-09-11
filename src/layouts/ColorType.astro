@@ -1,13 +1,15 @@
 ---
 interface Props {
-    title: string;
-    header: string;
-    paragraph: string;
+    colorHeader: string;
+    colorParagraph: string;
+    typeHeader: string;
+    typeParagraph: string;
 };
 
-const {title} = Astro.props;
-const {header} = Astro.props;
-const {paragraph} = Astro.props;
+const {colorHeader} = Astro.props;
+const {colorParagraph} = Astro.props;
+const {typeHeader} = Astro.props;
+const {typeParagraph} = Astro.props;
 ---
 
 <section class="bg-[#010105] h-screen grid content-center">
@@ -16,9 +18,9 @@ const {paragraph} = Astro.props;
         <!-- Left Column Start -->
         <div class="col-span-2 space-y-4 mb-8">
 
-            <p class="text-lg font-sans text-gray-400">{title}</p>
-            <h2 class="mt-3 mb-4 text-3xl tracking-tight font-mono font-medium md:text-4xl text-white">{header}</h2>
-            <p class="font-light font-sans sm:text-xl text-gray-400">{paragraph}</p>
+            <p class="text-lg font-sans text-gray-400">Color Scheme</p>
+            <h2 class="mt-3 mb-4 text-3xl tracking-tight font-mono font-medium md:text-4xl text-white">{colorHeader}</h2>
+            <p class="font-light font-sans sm:text-xl text-gray-400">{colorParagraph}</p>
 
             <div class="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
 
@@ -44,28 +46,28 @@ const {paragraph} = Astro.props;
         <!-- Left Column End -->
 
         <!-- Right Column Start -->
-        <div class="col-span-2 mb-8">
+        <div class="self-start col-span-2 mb-8">
 
-            <p class="text-lg font-sans text-gray-400">{title}</p>
-            <h2 class="mt-3 mb-4 text-3xl tracking-tight font-mono font-medium md:text-4xl text-white">{header}</h2>
-            <p class="font-light font-sans sm:text-xl text-gray-400">{paragraph}</p>
+            <p class="text-lg font-sans text-gray-400">Typography</p>
+            <h2 class="mt-3 mb-4 text-3xl tracking-tight font-mono font-medium md:text-4xl text-white">{typeHeader}</h2>
+            <p class="font-light font-sans sm:text-xl text-gray-400">{typeParagraph}</p>
 
             <div class="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
 
-                <div class="grid space-y-2">
-                    <slot name="colorOne"/>
+                <div class="grid space-y-1">
+                    <slot name="typeOne"/>
                 </div>
     
-                <div class="grid space-y-2">
-                    <slot name="colorTwo"/>
+                <div class="grid space-y-1">
+                    <slot name="typeTwo"/>
                 </div>
     
-                <div class="grid space-y-2">
-                    <slot name="colorThree"/>
+                <div class="grid space-y-1">
+                    <slot name="typeThree"/>
                 </div>
     
-                <div class="grid space-y-2">
-                    <slot name="colorFour"/>
+                <div class="grid space-y-1">
+                    <slot name="typeFour"/>
                 </div>
     
             </div>
