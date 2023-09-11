@@ -1,11 +1,16 @@
 ---
-import { Image } from 'astro:assets';
-import mcmImage from '../assets/MCM-Website.jpg';
-
-import Navigation from '../components/Navigation.astro';
+//Layout Imports
 import MainLayout from '../layouts/MainLayout.astro';
 import ProjectHero from '../layouts/ProjectHero.astro';
 import ProjectInfo from '../layouts/ProjectInfo.astro';
+import PS from '../layouts/P&S.astro';
+import BackgroundVid from '../layouts/BackgroundVid.astro';
+import ColorType from '../layouts/ColorType.astro';
+import Review from '../layouts/Review.astro';
+import Impact from '../layouts/Impact.astro';
+
+//Component Imports
+import Navigation from '../components/Navigation.astro';
 import Tooltip from '../components/Tooltip.astro';
 import LiveButton from '../components/LiveButton.astro';
 ---
@@ -14,7 +19,9 @@ import LiveButton from '../components/LiveButton.astro';
     <ProjectHero 
     header='MCM Custom Builders' 
     paragraph='Discover how a strategic redesign transformed a concrete contractor website into a user-friendly hub.'>
-      <Image slot="project-bgImage" alt="" src={mcmImage} transition:name="mcm-image" class="object-center object-cover inset-0 absolute h-full w-full" alt="MCM home page"/>
+        <video slot="project-bgImage" autoplay loop transition:name="cec-image" transition:persist class="object-center object-cover absolute inset-0 h-full w-full">
+            <source src="/video/MCM-Home.mp4" type="video/mp4" />
+        </video>
     </ProjectHero>
 
     <Navigation></Navigation>
@@ -44,14 +51,50 @@ import LiveButton from '../components/LiveButton.astro';
 
     </ProjectInfo>
 
-    <!-- Video Case Study Section Start -->
-    <section class="h-screen bg-[#010105]">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 sm:text-center lg:py-16">
-            <h2 class="mb-4 text-4xl tracking-tight font-mono text-gray-100">Video Case Study</h2>
-            <iframe class="mx-auto mt-8 w-full max-w-2xl h-full rounded-lg lg:mt-12 sm:h-96" src="https://www.youtube.com/embed/4bnJG2UDr9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </section>
-    <!-- Video Case Study Section End -->
+    <PS></PS>
+
+    <ColorType 
+      colorHeader='Colors that communicate the right message'
+      colorParagraph='These were the colors chosen'
+      typeHeader='Typography'
+      typeParagraph='These were the fonts chosen'>
+
+        <!-- Color Start -->
+        <div slot="colorOne" class="w-20 h-20 rounded-full bg-orange-500 border-4 border-orange-600"></div>
+        <h3 slot="colorOne" class="mb-2 text-xl font-sans text-white">#F97316</h3>
+
+        <div slot="colorTwo" class="w-20 h-20 rounded-full bg-gray-500 border-4 border-gray-600"></div>
+        <h3 slot="colorTwo" class="mb-2 text-xl font-sans text-white">#6B7280</h3>
+
+        <div slot="colorThree" class="w-20 h-20 rounded-full bg-gray-800 border-4 border-gray-900"></div>
+        <h3 slot="colorThree" class="mb-2 text-xl font-sans text-white">#1F2937</h3>
+
+        <div slot="colorFour" class="w-20 h-20 rounded-full bg-gray-50 border-4 border-gray-300"></div>
+        <h3 slot="colorFour" class="mb-2 text-xl font-sans text-white">#F9FAFB</h3>
+        <!-- Color End -->
+
+        <!-- Type Start -->
+        <svg slot="typeOne" width="88" height="19" viewBox="0 0 88 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.984 1.2H4.968C6.328 1.2 7.32 1.52 7.944 2.16C8.568 2.784 8.88 3.752 8.88 5.064V5.736C8.88 6.6 8.736 7.304 8.448 7.848C8.176 8.392 7.752 8.784 7.176 9.024V9.072C8.488 9.52 9.144 10.688 9.144 12.576V14.016C9.144 15.312 8.8 16.304 8.112 16.992C7.44 17.664 6.448 18 5.136 18H0.984V1.2ZM4.656 8.04C5.184 8.04 5.576 7.904 5.832 7.632C6.104 7.36 6.24 6.904 6.24 6.264V5.328C6.24 4.72 6.128 4.28 5.904 4.008C5.696 3.736 5.36 3.6 4.896 3.6H3.624V8.04H4.656ZM5.136 15.6C5.6 15.6 5.944 15.48 6.168 15.24C6.392 14.984 6.504 14.552 6.504 13.944V12.48C6.504 11.712 6.368 11.184 6.096 10.896C5.84 10.592 5.408 10.44 4.8 10.44H3.624V15.6H5.136ZM10.6871 1.2H17.8871V3.6H13.3271V8.04H16.9511V10.44H13.3271V15.6H17.8871V18H10.6871V1.2ZM19.4059 1.2H23.3899C24.7499 1.2 25.7419 1.52 26.3659 2.16C26.9899 2.784 27.3019 3.752 27.3019 5.064V5.736C27.3019 6.6 27.1579 7.304 26.8699 7.848C26.5979 8.392 26.1739 8.784 25.5979 9.024V9.072C26.9099 9.52 27.5659 10.688 27.5659 12.576V14.016C27.5659 15.312 27.2219 16.304 26.5339 16.992C25.8619 17.664 24.8699 18 23.5579 18H19.4059V1.2ZM23.0779 8.04C23.6059 8.04 23.9979 7.904 24.2539 7.632C24.5259 7.36 24.6619 6.904 24.6619 6.264V5.328C24.6619 4.72 24.5499 4.28 24.3259 4.008C24.1179 3.736 23.7819 3.6 23.3179 3.6H22.0459V8.04H23.0779ZM23.5579 15.6C24.0219 15.6 24.3659 15.48 24.5899 15.24C24.8139 14.984 24.9259 14.552 24.9259 13.944V12.48C24.9259 11.712 24.7899 11.184 24.5179 10.896C24.2619 10.592 23.8299 10.44 23.2219 10.44H22.0459V15.6H23.5579ZM31.149 1.2H34.725L37.461 18H34.821L34.341 14.664V14.712H31.341L30.861 18H28.413L31.149 1.2ZM34.029 12.432L32.853 4.128H32.805L31.653 12.432H34.029ZM42.1035 18.24C40.8235 18.24 39.8555 17.88 39.1995 17.16C38.5435 16.424 38.2155 15.376 38.2155 14.016V13.056H40.7115V14.208C40.7115 15.296 41.1675 15.84 42.0795 15.84C42.5275 15.84 42.8635 15.712 43.0875 15.456C43.3275 15.184 43.4475 14.752 43.4475 14.16C43.4475 13.456 43.2875 12.84 42.9675 12.312C42.6475 11.768 42.0555 11.12 41.1915 10.368C40.1035 9.408 39.3435 8.544 38.9115 7.776C38.4795 6.992 38.2635 6.112 38.2635 5.136C38.2635 3.808 38.5995 2.784 39.2715 2.064C39.9435 1.328 40.9195 0.959999 42.1995 0.959999C43.4635 0.959999 44.4155 1.328 45.0555 2.064C45.7115 2.784 46.0395 3.824 46.0395 5.184V5.88H43.5435V5.016C43.5435 4.44 43.4315 4.024 43.2075 3.768C42.9835 3.496 42.6555 3.36 42.2235 3.36C41.3435 3.36 40.9035 3.896 40.9035 4.968C40.9035 5.576 41.0635 6.144 41.3835 6.672C41.7195 7.2 42.3195 7.84 43.1835 8.592C44.2875 9.552 45.0475 10.424 45.4635 11.208C45.8795 11.992 46.0875 12.912 46.0875 13.968C46.0875 15.344 45.7435 16.4 45.0555 17.136C44.3835 17.872 43.3995 18.24 42.1035 18.24ZM51.4449 1.2H54.7569L57.3249 11.256H57.3729V1.2H59.7249V18H57.0129L53.8449 5.736H53.7969V18H51.4449V1.2ZM61.6871 1.2H68.8871V3.6H64.3271V8.04H67.9511V10.44H64.3271V15.6H68.8871V18H61.6871V1.2ZM74.2459 18.24C72.9659 18.24 71.9899 17.88 71.3179 17.16C70.6459 16.424 70.3099 15.376 70.3099 14.016V1.2H72.9499V14.208C72.9499 14.784 73.0619 15.2 73.2859 15.456C73.5259 15.712 73.8619 15.84 74.2939 15.84C74.7259 15.84 75.0539 15.712 75.2779 15.456C75.5179 15.2 75.6379 14.784 75.6379 14.208V1.2H78.1819V14.016C78.1819 15.376 77.8459 16.424 77.1739 17.16C76.5019 17.88 75.5259 18.24 74.2459 18.24ZM80.0621 1.2H87.2621V3.6H82.7021V8.04H86.3261V10.44H82.7021V15.6H87.2621V18H80.0621V1.2Z" fill="white"/>
+        </svg>                    
+        <p slot="typeOne" class="text-sm font-sans text-gray-400">For Logo</p>
+
+        <h3 slot="typeTwo" class="mb-2 text-xl font-sans text-white">Bebas Neue</h3>
+        <p slot="typeTwo" class="text-sm font-sans text-gray-400">For H1 - H3</p>
+
+        <h3 slot="typeThree" class="mb-2 text-xl font-sans text-white">Inter</h3>
+        <p slot="typeThree" class="text-sm font-sans text-gray-400">For paragraphs</p>
+        <!-- Type End -->
+    
+    </ColorType>
+
+    <Review></Review>
+
+    <BackgroundVid>
+      <source src="/video/MCM-Process.mp4" type="video/mp4" />
+    </BackgroundVid>
+
+    <Impact></Impact>
 
 </MainLayout>
 
