@@ -1,7 +1,6 @@
 ---
 import '../styles/main.css';
-import ProblemCard from '../components/ProblemCard.astro';
-import SolutionCard from '../components/SolutionCard.astro';
+
 ---
 
 <section class="h-screen bg-gradient-to-b from-[#010105] via-[#010105]/20 to-[#010105]">
@@ -17,17 +16,8 @@ import SolutionCard from '../components/SolutionCard.astro';
         <!-- Pricing Card Container Start -->
         <div class="space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0">
 
-            <ProblemCard 
-                header="Problems"
-                paragraph='Heres a list of problems the stake holder had with his website.'
-                pointOne='No SEO'>
-            </ProblemCard>
-
-            <SolutionCard 
-                header='Solutions'
-                paragraph='Heres a list of solutions for those problems.'
-                pointOne='Implement SEO'>
-            </SolutionCard>
+            <slot name="problemCard"/>
+            <slot name="solutionCard"/>
             
         </div>
     </div>

@@ -14,9 +14,12 @@ import Navigation from '../components/Navigation.astro';
 import Tooltip from '../components/Tooltip.astro';
 import GithubButton from '../components/GithubButton.astro';
 import LiveButton from '../components/LiveButton.astro';
+import ProblemCard from '../components/ProblemCard.astro';
+import SolutionCard from '../components/SolutionCard.astro';
 ---
 
 <MainLayout title='CEC Website | Kevin Payano Portfolio'>
+
     <ProjectHero 
     header='Concrete Experts Company' 
     paragraph='Discover how a strategic redesign transformed a concrete contractor website into a user-friendly hub.'>
@@ -68,7 +71,21 @@ import LiveButton from '../components/LiveButton.astro';
 
     </ProjectInfo>
 
-    <PS></PS>
+    <PS>
+
+      <ProblemCard 
+        slot='problemCard'
+        header='Problems'
+        paragraph='Heres a list of problems the stake holder had with his website.'
+        pointOne='No SEO'/>
+
+      <SolutionCard
+        slot='solutionCard'
+        header='Solutions'
+        paragraph='Heres a list of solutions the stake holder had with his website.'
+        pointOne='Implement SEO'/>
+
+      </PS>
 
     <BackgroundVid>
       <source src="/video/CEC-AboutUs.mp4" type="video/mp4" />
