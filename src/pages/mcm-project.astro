@@ -13,6 +13,8 @@ import Impact from '../layouts/Impact.astro';
 import Navigation from '../components/Navigation.astro';
 import Tooltip from '../components/Tooltip.astro';
 import LiveButton from '../components/LiveButton.astro';
+import ProblemCard from '../components/ProblemCard.astro';
+import SolutionCard from '../components/SolutionCard.astro';
 ---
 
 <MainLayout title='MCM Custom Builders Website | Kevin Payano Portfolio'>
@@ -51,7 +53,20 @@ import LiveButton from '../components/LiveButton.astro';
 
     </ProjectInfo>
 
-    <PS></PS>
+    <PS>
+        <ProblemCard 
+        slot='problemCard'
+        header='Problems'
+        paragraph='Heres a list of problems the stake holder had with his website.'
+        pointOne='No SEO'/>
+
+      <SolutionCard
+        slot='solutionCard'
+        header='Solutions'
+        paragraph='Heres a list of solutions the stake holder had with his website.'
+        pointOne='Implement SEO'/>
+
+    </PS>
 
     <ColorType 
       colorHeader='Colors that communicate the right message'
