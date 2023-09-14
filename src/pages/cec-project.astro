@@ -21,7 +21,7 @@ import SolutionCard from '../components/SolutionCard.astro';
 
     <ProjectHero 
     header='Concrete Experts Company' 
-    paragraph='Discover how a strategic redesign transformed a concrete contractor website into a user-friendly hub.'>
+    paragraph='Elevating Concrete Experts Companys Online Presence'>
       <video slot="project-bgImage" autoplay loop transition:name="cec-image" transition:persist class="object-center object-cover absolute inset-0 h-full w-full">
         <source src="/video/CEC-Home.mp4" type="video/mp4" />
       </video> 
@@ -31,7 +31,7 @@ import SolutionCard from '../components/SolutionCard.astro';
 
     <ProjectInfo 
       projectHeader='Concrete Experts Company'
-      projectDescription='Discover how a strategic redesign transformed a concrete contractor website into a user-friendly hub.'
+      projectDescription='We overhauled Concrete Experts Companys website to combat key issues, including an outdated design, sparse content, and poor search engine visibility. By introducing a fresh design, expanded content, and robust SEO tactics, we have substantially enhanced their online presence and audience reach.'
       clientHeader='Client'
       client='Concrete Experts Company'
       roleHeader='Role'
@@ -70,12 +70,15 @@ import SolutionCard from '../components/SolutionCard.astro';
 
     </ProjectInfo>
 
-    <PS>
+    <PS 
+      header="Problem and Solution"
+      subheading='Tackling Challenges and Implementing Effective Solutions'
+      paragraph='The obstacles faced and the innovative strategies that turned these challenges into opportunities for growth and success.'>
 
       <ProblemCard 
         slot='problemCard'
         header='Problems'
-        paragraph='Heres a list of problems the stake holder had with his website.'
+        paragraph='Key Issues Encountered During the Project'
         pointOne='Outdated Website Design'
         pointTwo='Limited Content on Pages'
         pointThree='Lack of SEO Optimization'
@@ -84,7 +87,7 @@ import SolutionCard from '../components/SolutionCard.astro';
       <SolutionCard
         slot='solutionCard'
         header='Solutions'
-        paragraph='Heres a list of solutions the stake holder had with his website.'
+        paragraph='Solutions Employed During the Project'
         pointOne='Fresh and Modern Design'
         pointTwo='Comprehensive Content and Navigation'
         pointThree='SEO Integration'
