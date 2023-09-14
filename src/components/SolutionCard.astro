@@ -7,6 +7,7 @@ interface Props {
     pointOne: string;
     pointTwo?: string;
     pointThree?: string;
+    pointFour?: string;
 };
 
 const {header} = Astro.props;
@@ -14,6 +15,7 @@ const {paragraph} = Astro.props;
 const {pointOne} = Astro.props;
 const {pointTwo} = Astro.props;
 const {pointThree} = Astro.props;
+const {pointFour} = Astro.props;
 ---
 
 <!-- Solution Card Start -->
@@ -22,7 +24,7 @@ const {pointThree} = Astro.props;
     <!-- Header & Description Start -->
     <div class="space-y-4">
         <h3 class="text-2xl text-gray-50 font-mono font-medium">{header}</h3>
-        <p class="font-light font-sans text-gray-500 sm:text-lg">{paragraph}</p>
+        <p class="font-light font-sans text-gray-400 sm:text-lg">{paragraph}</p>
     </div>
     
     <!-- List -->
@@ -41,6 +43,11 @@ const {pointThree} = Astro.props;
             <!-- Icon -->
             <svg class="flex-shrink-0 w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path fill="currentColor" d="M426.072 86.928A238.75 238.75 0 0 0 88.428 424.572A238.75 238.75 0 0 0 426.072 86.928ZM257.25 462.5c-114 0-206.75-92.748-206.75-206.75S143.248 49 257.25 49S464 141.748 464 255.75S371.252 462.5 257.25 462.5Z"/><path fill="currentColor" d="m221.27 305.808l-73.413-73.412l-22.627 22.627l96.04 96.04l167.5-167.499l-22.628-22.627L221.27 305.808z"/></svg>
             <span>{pointThree}</span>
+        </li>
+        <li class="flex items-center space-x-3">
+            <!-- Icon -->
+            <svg class="flex-shrink-0 w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path fill="currentColor" d="M426.072 86.928A238.75 238.75 0 0 0 88.428 424.572A238.75 238.75 0 0 0 426.072 86.928ZM257.25 462.5c-114 0-206.75-92.748-206.75-206.75S143.248 49 257.25 49S464 141.748 464 255.75S371.252 462.5 257.25 462.5Z"/><path fill="currentColor" d="m221.27 305.808l-73.413-73.412l-22.627 22.627l96.04 96.04l167.5-167.499l-22.628-22.627L221.27 305.808z"/></svg>
+            <span>{pointFour}</span>
         </li>
     </ul>
     
