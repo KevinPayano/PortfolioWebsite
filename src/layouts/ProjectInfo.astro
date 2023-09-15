@@ -24,27 +24,26 @@ const {yearHeader} = Astro.props;
 const {year} = Astro.props;
 ---
 
-<!-- Hero 2 Section Starts -->
+<!-- Hero Section Starts -->
 <section class="bg-[#010105]">
-    <div class="h-screen gap-12 mx-auto max-w-screen-xl grid content-center lg:grid-cols-2">
+    <div class="px-4 py-24 gap-12 mx-auto max-w-screen-xl grid content-center lg:grid-cols-2">
         
-        <!-- Left Side -->
+        <!-- Left Side Start -->
         <div class="text-gray-400 sm:text-lg">
-            <h2 class="mb-4 text-6xl tracking-tight font-mono text-gray-100">{projectHeader}</h2>
-            <!--<slot name="tags" />-->
+            <h2 class="mb-4 text-5xl tracking-tight font-mono text-gray-100">{projectHeader}</h2>
             <p class="mb-8 font-sans font-light lg:text-xl">{projectDescription}</p>
 
             <!-- Buttons Slot -->
-            <div class="flex gap-4">
+            <div class="flex flex-col md:flex-row gap-4">
               <slot name="buttons"/>
-            </div>    
-            
+            </div>      
         </div>
+        <!-- Left Side End -->
 
-        <!-- Right Side -->
+        <!-- Right Side Start -->
         <div class="grid divide-y-2 divide-gray-900">
 
-          <div class="grid grid-cols-2 content-center">
+          <div class="grid grid-cols-2 py-3 content-center">
             <div class="text-left">
                 <h3 class="font-sans font-medium text-gray-100 text-xl">{clientHeader}</h3>
             </div>
@@ -53,7 +52,7 @@ const {year} = Astro.props;
             </div>
           </div>
 
-          <div class="grid grid-cols-2 content-center">
+          <div class="grid grid-cols-2 py-3 content-center">
             <div class="text-left">
                 <h3 class="font-sans font-medium text-gray-100 text-xl">{roleHeader}</h3>
             </div>
@@ -62,17 +61,16 @@ const {year} = Astro.props;
             </div>
           </div>
 
-          <div class="grid grid-cols-2 content-center">
+          <div class="grid grid-cols-2 py-3 content-center">
             <div class="text-left">
                 <h3 class="font-sans font-medium text-gray-100 text-xl">{toolsHeader}</h3>
             </div>
             <div class="flex justify-end">
               <slot name="tooltips" />
-            </div>
-            
+            </div>  
           </div>
 
-          <div class="grid grid-cols-2 content-center">
+          <div class="grid grid-cols-2 py-3 content-center">
             <div class="text-left">
                 <h3 class="font-sans font-medium text-gray-100 text-xl">{yearHeader}</h3>
             </div>
@@ -81,9 +79,9 @@ const {year} = Astro.props;
             </div>
           </div>
 
-
         </div>
+        <!-- Right Side End -->
 
     </div>
 </section>
-<!-- Hero 2 Section Ends -->
+<!-- Hero Section Ends -->
