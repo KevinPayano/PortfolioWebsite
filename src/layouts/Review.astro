@@ -1,5 +1,15 @@
 ---
+interface Props {
+    title: string;
+    header: string;
+    paragraphOne: string;
+    paragraphTwo?: string;
+};
 
+const {title} = Astro.props;
+const {header} = Astro.props;
+const {paragraphOne} = Astro.props;
+const {paragraphTwo} = Astro.props;
 ---
 
 <section class="bg-[#010105] grid content-center">
@@ -10,18 +20,16 @@
 
             <!-- Header & Description -->
             <div class="space-y-2 flex mb-2 flex-col md:mb-0">
-                <p class="text-lg font-sans font-medium text-teal-500">Standout From The Crowd</p>
-                <h2 class="text-3xl tracking-tight font-mono md:text-4xl text-white">Image Reviews</h2>
-                <p class="font-light font-sans sm:text-xl text-gray-400">I noticed that most of the competitors sites have reviews from clients about a job well done they did on their property. But, stepping into the mindset of a prospective client got me questioning, "Can I actually witness the work they've completed for this customer?"</p>
+                <p class="text-lg font-sans font-medium text-teal-500">{title}</p><!--  -->
+                <h2 class="text-3xl tracking-tight font-mono md:text-4xl text-white">{header}</h2><!--  -->
+                <p class="font-light font-sans sm:text-xl text-gray-400">{paragraphOne}</p><!--  -->
                 <br>
-                <p class="font-light font-sans sm:text-xl text-gray-400">So I decided to design a picture testimonial carousel that displays not only the feedback but also the finished project to any potential clients.</p>
+                <p class="font-light font-sans sm:text-xl text-gray-400">{paragraphTwo}</p><!--  -->
             </div>
 
             <!-- Review Video -->
             <div class="flex justify-center">
-                <video autoplay loop class="rounded-md w-full place-self-end">
-                    <source src="/video/CEC-Reviews.mp4" type="video/mp4" />
-                </video>
+                <slot name="reviewVideo"/>
             </div>
 
         </div>

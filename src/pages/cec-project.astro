@@ -72,8 +72,8 @@ import SolutionCard from '../components/SolutionCard.astro';
 
     <PS 
       header="Problem and Solution"
-      subheading='Tackling Challenges and Implementing Effective Solutions'
-      paragraph='The obstacles faced and the innovative strategies that turned these challenges into opportunities for growth and success.'>
+      subheading='Tackling Challenges, Implementing Solutions'
+      paragraph='Our collaboration with Concrete Experts Company aimed at building their online presence, showcasing their portfolio through a unique website, improving SEO integration, and organizing service information to attract more clients. The obstacles faced and the innovative strategies that turned these challenges into opportunities for growth and success.'>
 
       <ProblemCard 
         slot='problemCard'
@@ -99,7 +99,17 @@ import SolutionCard from '../components/SolutionCard.astro';
       <source src="/video/CEC-AboutUs.mp4" type="video/mp4" />
     </BackgroundVid>
 
-    <Review></Review>
+    <Review
+      title='Standout From The Crowd'
+      header='Image Reviews'
+      paragraphOne='I noticed that most of the competitors sites have reviews from clients about a job well done they did on their property. But, stepping into the mindset of a prospective client got me questioning, "Can I actually witness the work they have completed for this customer?"'
+      paragraphTwo='So I decided to design a picture testimonial carousel that displays not only the feedback but also the finished project to any potential clients.'>
+
+      <video slot="reviewVideo" autoplay loop class="rounded-md w-full place-self-end">
+        <source src="/video/CEC-Reviews.mp4" type="video/mp4" />
+      </video>
+
+    </Review>
 
     <BackgroundVid>
       <source src="/video/CEC-Portfolio.mp4" type="video/mp4" />
