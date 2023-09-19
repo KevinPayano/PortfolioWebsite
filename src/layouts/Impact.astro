@@ -1,5 +1,13 @@
 ---
+interface Props {
+    title: string;
+    header: string;
+    paragraph: string;
+};
 
+const {title} = Astro.props;
+const {header} = Astro.props;
+const {paragraph} = Astro.props;
 ---
 
 <section class="h-screen grid content-center bg-gradient-to-b from-[#010105] via-[#010105]/20 to-[#010105]">
@@ -9,30 +17,13 @@
 
         <!-- Header & Description -->
         <div class="space-y-2">
-            <p class="text-lg font-sans font-medium text-teal-500">Impact</p>
-            <h2 class="text-3xl tracking-tight font-mono sm:text-4xl text-gray-50">Measuring the Transformation</h2>
-            <p class="max-w-2xl font-light text-gray-400 sm:text-xl">Evaluating the transformations that have shaped Concrete Experts Company's online presence since the launch of the revamped website.</p>
+            <p class="text-lg font-sans font-medium text-teal-500">{title}</p>
+            <h2 class="text-3xl tracking-tight font-mono sm:text-4xl text-gray-50">{header}</h2>
+            <p class="max-w-2xl font-light text-gray-400 sm:text-xl">{paragraph}</p>
         </div>
 
         <!-- Stats Start -->
-        <dl class="grid gap-8 mt-8 sm:grid-cols-2 lg:gap-20 lg:mt-14 lg:grid-cols-4 text-gray-50">
-            <div class="flex flex-col">
-                <dt class="mb-2 text-3xl md:text-4xl font-extrabold tracking-tight">$76 billion</dt>
-                <dd class="font-light text-gray-400">Conversion Rate</dd>
-            </div>
-            <div class="flex flex-col">
-                <dt class="mb-2 text-3xl md:text-4xl font-extrabold">600+</dt>
-                <dd class="font-light text-gray-400">Bounce Rate</dd>
-            </div>
-            <div class="flex flex-col">
-                <dt class="mb-2 text-3xl md:text-4xl font-extrabold">90 milion</dt>
-                <dd class="font-light text-gray-400">Website Traffic</dd>
-            </div>
-            <div class="flex flex-col">
-                <dt class="mb-2 text-3xl md:text-4xl font-extrabold">0.10%</dt>
-                <dd class="font-light text-gray-400">SEO Score</dd>
-            </div>
-        </dl>
+        <slot name="stats"/>
         <!-- Stats End -->
 
     </div>
