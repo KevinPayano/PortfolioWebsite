@@ -1,8 +1,9 @@
 ---
 //Image optimization imports
 import { Image } from 'astro:assets';
-import mcmImage from '../assets/MCM-Cover.png'
-import cecImage from '../assets/CEC-Cover.png'
+import mcmImage from '../assets/MCM-Cover.png';
+import cecImage from '../assets/CEC-Cover.png';
+import profileImage from '../assets/Profile.jpg';
 
 //Component imports
 import Navigation from '../components/Navigation.astro';
@@ -168,7 +169,7 @@ import Tool from '../components/Tool.astro';
         <div class="grid max-w-screen-xl justify-center items-center px-4 py-8 mx-auto gap-20 lg:grid-cols-12">
   
           <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup">
+			<Image class="rounded-full grayscale" src={profileImage} alt='picture of me'/>
           </div>
   
           <div class="mr-auto place-self-center lg:col-span-7">
