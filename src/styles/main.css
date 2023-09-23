@@ -9,7 +9,7 @@
         font-family: 'IBM Plex Mono';
         font-style: normal;
         font-weight: 300;
-        src: url('fonts/mono/ibm-plex-mono-v19-latin-300.woff2') format('woff2'); 
+        src: url('../fonts/mono/ibm-plex-mono-v19-latin-300.woff2') format('woff2'); 
     }
     
     @font-face {
@@ -17,7 +17,7 @@
         font-family: 'IBM Plex Mono';
         font-style: normal;
         font-weight: 400;
-        src: url('fonts/mono/ibm-plex-mono-v19-latin-regular.woff2') format('woff2'); 
+        src: url('../fonts/mono/ibm-plex-mono-v19-latin-regular.woff2') format('woff2'); 
     }
     
     @font-face {
@@ -25,7 +25,7 @@
         font-family: 'IBM Plex Mono';
         font-style: normal;
         font-weight: 500;
-        src: url('fonts/mono/ibm-plex-mono-v19-latin-500.woff2') format('woff2'); 
+        src: url('../fonts/mono/ibm-plex-mono-v19-latin-500.woff2') format('woff2'); 
     }
     
     @font-face {
@@ -33,7 +33,7 @@
         font-family: 'IBM Plex Mono';
         font-style: normal;
         font-weight: 600;
-        src: url('fonts/mono/ibm-plex-mono-v19-latin-600.woff2') format('woff2'); 
+        src: url('../fonts/mono/ibm-plex-mono-v19-latin-600.woff2') format('woff2'); 
     }
     /* IBM Plex Mono End */
 
@@ -43,7 +43,7 @@
         font-family: 'IBM Plex Sans';
         font-style: normal;
         font-weight: 300;
-        src: url('fonts/sans/ibm-plex-sans-v19-latin-300.woff2') format('woff2'); 
+        src: url('../fonts/sans/ibm-plex-sans-v19-latin-300.woff2') format('woff2'); 
     }
     
     @font-face {
@@ -51,7 +51,7 @@
         font-family: 'IBM Plex Sans';
         font-style: normal;
         font-weight: 400;
-        src: url('fonts/sans/ibm-plex-sans-v19-latin-regular.woff2') format('woff2');
+        src: url('../fonts/sans/ibm-plex-sans-v19-latin-regular.woff2') format('woff2');
     }
     
     @font-face {
@@ -59,7 +59,7 @@
         font-family: 'IBM Plex Sans';
         font-style: normal;
         font-weight: 500;
-        src: url('fonts/sans/ibm-plex-sans-v19-latin-500.woff2') format('woff2'); 
+        src: url('../fonts/sans/ibm-plex-sans-v19-latin-500.woff2') format('woff2'); 
     }
     
     @font-face {
@@ -67,7 +67,7 @@
         font-family: 'IBM Plex Sans';
         font-style: normal;
         font-weight: 600;
-        src: url('fonts/sans/ibm-plex-sans-v19-latin-600.woff2') format('woff2'); 
+        src: url('../fonts/sans/ibm-plex-sans-v19-latin-600.woff2') format('woff2'); 
     }
 
     @font-face {
@@ -75,7 +75,7 @@
         font-family: 'IBM Plex Sans';
         font-style: italic;
         font-weight: 600;
-        src: url('fonts/sans/ibm-plex-sans-v19-latin-600italic.woff2') format('woff2');
+        src: url('../fonts/sans/ibm-plex-sans-v19-latin-600italic.woff2') format('woff2');
     }
     /* IBM Plex Sans End */
 }
