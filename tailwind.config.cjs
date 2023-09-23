@@ -7,9 +7,9 @@ module.exports = {
 		extend: {
 
 			cursor: {
-				default: 'url(CursorIcon.png), default',
-				auto: 'url(CursorIcon.png), auto',
-				pointer: 'url(PointerIcon.png), pointer',
+				default: 'url(../assets/CursorIcon.png), default',
+				auto: 'url(../assets/CursorIcon.png), auto',
+				pointer: 'url(../assets/PointerIcon.png), pointer',
 			  },
 
 			fontFamily: {
