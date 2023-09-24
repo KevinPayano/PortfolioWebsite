@@ -1,13 +1,15 @@
 ---
+interface Props {
+    videosrc: string;
+}
 
+const {videosrc} = Astro.props;
 ---
 
 <section class="">
     <div class="relative w-full h-screen">
 
-        <video autoplay loop playsinline class="object-center object-cover absolute inset-0 h-full w-full">
-            <slot class="z-0" slot="bgVideo" />
-        </video>
+        <video autoplay loop playsinline muted src={videosrc} class="object-center object-cover absolute inset-0 h-full w-full"></video>
 
         <div class="relative z-10 bg-gradient-to-b from-[#010105]/30 via-[#01010500] to-[#010105] w-full h-full"></div>
         

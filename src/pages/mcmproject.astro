@@ -18,9 +18,7 @@ import SolutionCard from '../components/SolutionCard.astro';
     <ProjectHero 
     header='MCM Custom Builders' 
     paragraph='Explore our transformative collaboration with MCM Custom Builders, crafting a standout web design that reflects their values and boosts their online visibility.'>
-        <video slot="project-bgImage" autoplay loop playsinline muted transition:name="cec-image" transition:persist class="object-center object-cover absolute inset-0 h-full w-full">
-            <source src="/video/MCM-Home.mp4" type="video/mp4" />
-        </video>
+        <video slot="project-bgImage" autoplay loop playsinline muted src="/video/MCM-Home.mp4" transition:name="cec-image" transition:persist class="object-center object-cover absolute inset-0 h-full w-full"></video>
     </ProjectHero>
 
     <Navigation></Navigation>
@@ -70,10 +68,11 @@ import SolutionCard from '../components/SolutionCard.astro';
     <Review
         title='Standout From The Crowd'
         header='Innovative Process Showcase'
-        paragraphOne='To set MCM Custom Builders apart from competitors, we opted for an engaging image and video slideshow to illustrate the processes of each service. Unlike traditional text-based lists, this dynamic approach offers an immersive and visually captivating experience for visitors, making information more accessible and memorable.'></Review>
+        paragraphOne='To set MCM Custom Builders apart from competitors, we opted for an engaging image and video slideshow to illustrate the processes of each service. Unlike traditional text-based lists, this dynamic approach offers an immersive and visually captivating experience for visitors, making information more accessible and memorable.'>
+    </Review>
 
-    <BackgroundVid>
-      <source src="/video/MCM-Process.mp4" type="video/mp4" />
+    <BackgroundVid
+        videosrc='/video/MCM-Process.mp4'>
     </BackgroundVid>
 
 
